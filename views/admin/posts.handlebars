@@ -1,0 +1,20 @@
+<h2>Lista de agendamentos: </h2>
+<hr>
+<a href="/admin/post/add">
+    <button class="btn btn-success mt-1">Novo agendamento</button>
+</a>
+
+{{#each post}}
+    <dir class="card">
+        <dir class="card-body">
+            <h4>{{tittle}}</h4><br>
+            <h5>Cliente: {{slug}}</h5>
+            <p>Descrição: {{description}}</p>
+            <small>Data: {{date}}</small><br><br>
+            <a href="/admin/post/edit/{{_id}}"><button class="btn btn-success">Editar agendamento</button></a>
+            <a href="/admin/post/delete/{{_id}}"><button class="btn btn-danger">Deletar agendamento</button></a>
+        </dir>
+    </dir>
+{{else}}
+    <h5>Nenhuma agendamento registrado !</h5>
+{{/each}}

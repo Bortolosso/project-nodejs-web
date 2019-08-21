@@ -1,0 +1,29 @@
+{{#each error}}
+    <dir class="alert alert-danger">{{text}}</dir>
+{{else}}
+
+{{/each}}
+
+<div class="card">
+    <dir class="card-body">
+        <h4>Novo agendamento</h4>
+        <form action="/admin/posts/new" method="POST">
+            <label for="titulo">Data de atendimento: </label>
+                <input type="text" name="tittle" class="form-control">
+            <label for="slug">Observação: </label>
+                <input type="text" name="slug" class="form-control">
+            <label for="description">Descrição: </label>
+                <input type="text" name="description" class="form-control"><br>
+            <label for="content"></label>
+                <label for="categorie">Selecionar cliente: </label>
+            <select name="categorie" class="custom-select">
+                {{#each categorie}}
+                    <option value="{{_id}}">{{slug}}</option>
+                {{else}}
+                    <option value="0">Nenhuma categoria registrada</option>
+                {{/each}}
+            </select>
+            <br><br><button class="btn btn-success" type="submit">Criar agendamento</button>
+        </form>
+    </dir>
+</div>

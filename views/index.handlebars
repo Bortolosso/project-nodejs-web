@@ -1,0 +1,27 @@
+<div class="jumbotron">
+  <h5 class="display-4">Hello ! </h5>
+  <p class="lead">Essa é uma ferramenta de cadastramento de clientes e agendamentos.</p>
+  <hr class="my-4">
+  <p>Clique no botão a baixo para cadastramento na plataforma.</p>
+  <a class="btn btn-primary btn-lg" href="/usuarios/login" role="button">Entrar</a>
+  <a class="btn btn-primary btn-lg" href="/usuarios/registro" role="button">Registre-se</a>
+</div>
+
+<a href="/admin/categories"><button class="btn btn-success">Adicionar cliente</button></a>
+<a href="/admin/posts"><button class="btn btn-success">Agendar horário</button></a>
+<hr>
+<h2>Agendamentos recentes:</h2>
+
+{{#each post}}
+<div class="card mt-4">
+    <div class="card-body">
+        <h3>{{tittle}}</h3>
+        <h5>{{slug}}</h5>
+        <p>{{description}}</p>
+        <small>Data do agendameto: {{date}}</small><br>
+    </div>
+</div>
+
+{{else}}
+    <h5>Não há nenhum agendamento registrado !</h5>
+{{/each}}

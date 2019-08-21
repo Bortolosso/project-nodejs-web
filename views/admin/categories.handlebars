@@ -1,0 +1,22 @@
+<h2>Clientes: </h2>
+<hr>
+<a href="/admin/categories/add">
+    <button class="btn btn-success mt-1">Cadastrar nova cliente</button>
+</a>
+
+{{#each categorie}}
+    <div class="card mt-2 mt-4">
+       <dir class="card-body">
+            <h4>{{slug}}</h4>
+            <small>Descrição: {{name}}</small><br>
+            <small>Data do cadastramento: {{date}}</small><br>
+            <a href="/admin/categories/edit/{{_id}}"><button class="btn btn-success mt-3"> Editar cliente </button></a>
+            <form action="/admin/categorie/delete" method="POST">
+                <input type="hidden" name="id" value="{{_id}}">
+                <button type="submit" class="btn btn-danger mt-2"> Deletar cliente </button>
+            </form>
+       </dir> 
+    </div>
+{{else}}
+
+{{/each}}
