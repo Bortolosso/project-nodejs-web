@@ -3,7 +3,7 @@ module.exports = {
         SUCCESS:"success_msg",
         ERROR:"error_msg",  
     },
-    APP:{
+    APP:{ //File
         PASSWORD_SECRET:"senha123",
         MONGODB:{
             MESSAGE:{
@@ -19,8 +19,8 @@ module.exports = {
         },
         SERVER_RUNNING:"Server it's running in http://localhost:"
     },
-    CONFIG:{
-        AUTH:{
+    CONFIG:{ //Folder
+        AUTH:{ //File
             EMAIL: "email",
             PASSWORD: "password",
             MESSAGE:{
@@ -28,7 +28,7 @@ module.exports = {
                 INVALID_PASSWORD: "Senha incorreta !"
             }
         },
-        DB:{
+        DB:{ //File
             PRODUCTION:"production",
             MONGOURI:{
                 CONNECT_CLUSTER:"mongodb://Joao:bortolosso9090@cluster0-shard-00-00-r9dfp.mongodb.net:27017,cluster0-shard-00-01-r9dfp.mongodb.net:27017,cluster0-shard-00-02-r9dfp.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority",
@@ -36,9 +36,9 @@ module.exports = {
             }
         }
     },
-    CONTROLLERS:{
-        ADMIN:{
-            CATEGORY:{
+    CONTROLLERS:{ //Folder
+        ADMIN:{ //Folder
+            CATEGORY:{ //File
                 MESSAGE:{
                     SUCCESS:{
                         REGISTER:"Cliente cadastrada com sucesso !",
@@ -59,7 +59,7 @@ module.exports = {
                     }
                 }
             },
-            POSTS:{
+            POSTS:{ //File
                 MESSAGE:{
                     SUCCESS:{
                         CREATE:"Agendamento criado com sucesso !",
@@ -81,11 +81,11 @@ module.exports = {
                 }
             }
         },
-        USERS:{
-            LOGIN:{
+        USERS:{ //Folder
+            LOGIN:{ //File
                 SUCCESS_LOGOUT:"Saiu da sessão com sucesso !",
             },
-            REGISTER:{
+            REGISTER:{ //File
                 MESSAGE:{
                     SUCCESS:{
                         CREATE_USER:"Usuario criado com sucesso !"
@@ -110,36 +110,36 @@ module.exports = {
             }
         }
     },
-    HELPERS:{
-        EADMIN:{
+    HELPERS:{ //Folder
+        EADMIN:{ //File
             MESSAGE:"Você deve estar logado parar ter acesso !"
         }
     },
-    MODELS:{
-        CATEGORIE:{
+    MODELS:{ //Folder
+        CATEGORIE:{ //File
 
         },
-        POST:{
+        POST:{ //File
 
         },
-        USUARIO:{
+        USUARIO:{ //File
 
         }
     },
-    ROUTES:{
+    ROUTES:{ //Folder
         ADMIN:{
-            CATEGORY:{
+            CATEGORY:{ //File
 
             },
-            POSTS:{
+            POSTS:{ //File
 
             }
         },
-        USERS:{
-            LOGIN:{
+        USERS:{ //Folder
+            LOGIN:{ //File
 
             },
-            REGISTER:{
+            REGISTER:{ //File
 
             }
         }
